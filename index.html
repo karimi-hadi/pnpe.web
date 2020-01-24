@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+
+<head>
+  <title>پیشگام نقشه‌پرداز اشراق</title>
+   <link rel="icon" href="img/favi.png" type="image/x-icon">
+
+  <meta name="viewport" content="width=1024" />
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="keywords" content="پیشگام نقشه‌پرداز اشراق، نقشه‌برداری، اطلاعات مکانی، سنجش از دور، ژئودزی" />
+  <meta name="description" content="پیشگام نقشه‌پرداز اشراق شرکتی فعال در زمینه‌ی اطلاعات مکانی" />
+
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="" />
+
+
+
+  <script src="js/slide.js"></script>
+  <script src="js/map.js"></script>
+  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139590716-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-139590716-1');
+  </script>
+</head>
+
+<body onload="showSlides(); init()">
+
+  <!--
+        Header =================================================================
+  -->
+  <header>
+    <div class="row">
+      <nav>
+        <a id="menu-icon"></a>
+        <ul>
+          <li><a href="#home">خانه</a></li>
+          <li><a href="#intro">معرفی</a></li>
+          <li><a href="#service">خدمات</a></li>
+          <li><a href="#contact">تماس با ما</a></li>
+        </ul>
+      </nav>
+      <div id="header-title">پیشگام نقشه‌پرداز اشراق</div>
+      <a href="#"><img id="logo" src="img/logo.png" alt="PNPE_logo"/></a>
+    </div>
+  </header>
+
+  <!--
+        Slides (home) ==========================================================
+  -->
+  <div id="home">
+    <!-- Full-width image with caption -->
+    <ul class="slideshow">
+      <li class="mySlide fade" style="background-image: url('img/musa.jpg')">
+        <div class="text">
+          <h3>سیستم اطلاعات مکانی و سنجش از دور</h3>
+        </div>
+      </li>
+
+      <li class="mySlide fade" style="background-image: url('img/surveying.jpg')">
+        <div class="text">
+          <h3>نقشه‌برداري، ژئودزی و فتوگرامتری</h3>
+        </div>
+      </li>
+    </ul>
+
+    <!-- Next and Previous -->
+    <a class="prev" onclick="plusSlides(-1)">
+      <i class="fas fa-angle-left"></i>
+    </a>
+    <a class="next" onclick="plusSlides(1)">
+      <i class="fas fa-angle-right"></i>
+    </a>
+  </div>
+
+  <!--
+        Introduction ===========================================================
+  -->
+  <div id="intro">
+    <div class="row black">
+      <h1 class="center">
+        پیشگام نقشه پرداز اشراق شرکتی تخصصی
+        <br />
+        در حوزه‌ی
+        <span class="red">فناوری اطلاعات مکانی</span>
+      </h1>
+
+      <div class="gridIntro">
+        <div class="introItems">
+          <h2 class="center">معرفی</h2>
+            <p>
+              شرکت فنی و مهندسی پیشگام نقشه پرداز اشراق به طور رسمی از
+              سال 1397 شروع به فعالیت کرده است. شروع فعالیت این شرکت
+              مقارن با ورود این شرکت به پارک علم و فناوری استان زنجان
+              بود که این امر نوید بخش گامی موثر در راستای تبدیل علم به ثروت
+              و تحقق سیاست‌های اقتصاد مقاومتی است. زمینه‌های اصلی فعالیت شرکت
+              پیشگام نقشه‌پرداز به دو شاخه‌ اصلی: مهندسی نقشه‌برداری و
+              فناوری اطلاعات مکانی تقسیم می‌شود.
+            </p>
+            <i class="fas fa-file-download"></i>
+            <a class="black" href="files/PNPEcompanyIntro.pdf" target="_blank">دانلود معرفی نامه شرکت</a>
+        </div>
+        <div class="introItems">
+          <h2 class="center">خط مشی</h2>
+              <ul>
+                <li>برنامه‌ریزی و مدیریت منابع برای رسیدن به اهداف پروژه</li>
+                <li>ارتباط روشن و شفاف با تمامی شرکای تجاری و مشتریان</li>
+                <li>شناسایی و تامین نیازها و انتظارات مشتریان و ذینفعان</li>
+                <li>بکارگیری تکنولوژی‌ها و تجهیزات نوین در ارایه خدمات</li>
+              </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!--
+        Services ===============================================================
+  -->
+  <div id="service">
+    <div class="row black">
+      <h1 class=" center">
+        خدمات شرکت
+      </h1>
+      <div class="gridContainer">
+        <div class="gridItem">
+          <div class="gridIcon"><img src="img/gis.png" alt="GIS"></div>
+          <div class="gridInfo">
+            <h3>سیستم اطلاعات مکانی</h3>
+            <p>طراحی و ایجاد سیستم های اطلاعات جغرافیایی، کاداستر و مدیریت زیرساخت و همچنین آماده‌سازی اطلاعات مکانی به
+              منظور ورود به سیستم اطلاعات جغرافیایی، طراحی و ایجاد سیستم هایی که مبنای اطلاعات یا فناوری های بکار رفته
+              در آن ها مکانی می‌باشد</p>
+          </div>
+        </div>
+        <div class="gridItem">
+          <div class="gridIcon"><img src="img/remote.png" alt="Remote Sensing"></div>
+          <div class="gridInfo">
+            <h3>سنجش از دور</h3>
+            <p>تبدیل عکس های ماهواره‌ای به نقشه و تهیه انواع نقشه های عکسی و تصویری و دیگر خدمات سنجش از دور مانند پایش
+              محیط زیست (منابع آب، خاک و هوا) و مطالعات فرو نشست زمین با استفاده از تصاویر ماهواره‌ای</p>
+          </div>
+        </div>
+        <div class="gridItem">
+          <div class="gridIcon"><img src="img/land.png" alt="Surveying"></div>
+          <div class="gridInfo">
+            <h3>نقشه برداری زمینی</h3>
+            <p>شامل تهیه نقشه‌هاي توپوگرافی اعم از منطقه‌اي، شهري و نقشه‌هاي‌ کاداستر، نقشه‌برداري و پیاده کردن طرح‌ها
+              شامل مسیرها، خطوط لوله، انتقال نیرو، تهیه پروفیلهاي طولی و عرضی، تجمیع و افراز زمین</p>
+          </div>
+        </div>
+        <div class="gridItem">
+          <div class="gridIcon"><img src="img/gnss.png" alt="GNSS"></div>
+          <div class="gridInfo">
+            <h3>ژئودزی</h3>
+            <p>خدمات مرتبط به تخصص ژئودزی، نقشه‌برداری تونل و معدن، میکروژئودزی و مطالعات جابجایی گسل ها، رفتارسنجی سدها
+              و ابنیه فنی، گسترش شبکه‌های ژئودزی و ترازیابی دقیق و تعیین موقعیت نقاط با گیرنده‌های ماهواره‌ای بصورت آنی
+              و پس پردازش</p>
+          </div>
+        </div>
+        <div class="gridItem">
+          <div class="gridIcon"><img src="img/drone.png" alt="Drone"></div>
+          <div class="gridInfo">
+            <h3>فتوگرامتری</h3>
+            <p>تعیین و اندازه‌گیري نقاط کنترل زمینی عکسی، تهیه مدل ارتفاعی رقومی، تبدیل عکس‌های هوایی به نقشه و تهیه
+              انواع نقشه‌های عکسی و تصویری، فتوگرامتری برد کوتاه و دیگر خدمات فتوگرامتری.</p>
+          </div>
+        </div>
+        <div class="gridItem">
+          <div class="gridIcon"><img src="img/prog.png" alt="Programming"></div>
+          <div class="gridInfo">
+            <h3>راه کارهای وب و موبایل</h3>
+            <p>مطالعات اولیه، امکان سنجی، شناخت و تعیین نیاز های اطلاعاتی سازمان ها، تولید و پشتیبانی سیستم های نرم
+              افزاری، ارائه و پشتیبانی نرم افزار های پایه‌ای و سیستمی، تحقیق و آموزش در زمینه کاربرد موثر فناوری اطلاعات
+              در سازمان ها و موسسات</p>
+          </div>
+        </div>
+        <div class="gridItem">
+          <div class="gridIcon"><img src="img/geo-study.png" alt="Geographical study"></div>
+          <div class="gridInfo">
+            <h3>مطالعات جغرافیایی</h3>
+            <p>انجام مطالعات منطقه‌ای، توریسم و گردشگری، مکان‌یابی توسعه سکونتگاه‌ها و کاربری زمین، به کارگیری سیستم
+              اطلاعات جغرافیایی، پایگاه داده مکانی و تصاویر ماهواره‌ای در مطالعات اقتصادی، اجتماعی، فرهنگی در زمینه های
+              مختلف</p>
+          </div>
+        </div>
+        <div class="gridItem">
+          <div class="gridIcon"><img src="img/edu.png" alt="Education"></div>
+          <div class="gridInfo">
+            <h3>خدمات آموزشی</h3>
+            <p>انجام تحقیقات علمی درسطوح ملی و بین‌المللی با همکاری متخصصان و نهاد های اجرایی علمی و پژوهشی، آموزش
+              مفاهیم و نرم‌افزار های تخصصی حوزه علوم ژئوماتیک، آموزش برنامه‌نویسی
+              (وب و موبایل)
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--
+        Contact us =============================================================
+  -->
+  <div id="contact">
+    <div class="row black">
+      <h1 class="center">تماس با ما</h1>
+
+      <div class="gridContact">
+        <div class="contactItem" id="mapFrame">
+        </div>
+
+        <div class="contactItem" id="visit">
+          <table id="tbl-visit">
+            <tr>
+              <td><i class="fas fa-globe-americas"></i></td>
+              <td class="center">زنجان، انصاریه، میدان پروین اعتصامی، خیابان وحی، پارک علم و فناوری استان زنجان،
+                واحد12
+              </td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-mobile-alt"></i></td>
+              <td class="l2r center">(+98) 9196741524 - (+98) 9120676117</td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-phone-square"></i></td>
+              <td class="l2r center">(024) 33737905</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!--
+        Footer =================================================================
+  -->
+  <footer class="center">
+    Copyright &copy; 2018-2020 <b>PNPE Company</b>, All rights reserved.
+  </footer>
+
+</body>
+</html>
